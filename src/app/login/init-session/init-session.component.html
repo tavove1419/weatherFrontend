@@ -1,0 +1,24 @@
+<p-toast></p-toast>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <div class="fadeIn first">
+        <img src="../../../assets/img/logoInicio.png" id="icon" alt="User Icon" />
+      </div>
+      <form [formGroup]="formLogin">
+        <div class="row">
+          <div class="p-col-12 p-md-12 p-lg-12 p-sm-12">
+            <input type="text" formControlName="user" class="fadeIn second" placeholder="Ingresar usuario">
+          </div>
+          <div class="p-col-12 p-md-12 p-lg-12 p-sm-12">
+              <input type="password" (keyup)="eventEnter($event.keyCode)" formControlName="password" class="fadeIn third" placeholder="Ingresar contraseña">
+          </div>
+          <div class="p-col-12 p-md-12 p-lg-12 p-sm-12">
+            <input type="button" (click)="getLogin()" class="fadeIn fourth" value="Iniciar Sesion">    
+          </div>
+        </div>
+      </form>
+      <div id="formFooter">
+      </div>
+    </div>
+</div>
+

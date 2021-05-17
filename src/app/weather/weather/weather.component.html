@@ -1,0 +1,22 @@
+<div class="position" *ngIf="loading">
+    <p-progressSpinner></p-progressSpinner>
+</div>
+<div class="title">
+    PRONOSTICO DEL TIEMPO
+</div>
+<p-card class="p-col-12 p-md-6 p-lg-3"  *ngIf="!loading">
+    <div class="p-grid">
+        <div class="p-col-12 p-md-6 p-lg-3">
+            <img class="img" src="../../../assets/img/tiempo.png" alt="">
+        </div>
+        <div class="p-col-12 p-md-6 p-lg-9">
+            <p class="subtitle">Bienvido(a) {{nameUser}} </p> 
+            <p class="subtitle">La Temperatura para hoy {{date}} en la ciudad de Medellin {{city}} - {{country}}</p> 
+            <p class="subtitle">Temperatura Minima {{dataTemperature?.temp2m.min}}º - Temperatura Maxima {{dataTemperature?.temp2m.max}}º</p>
+            <button pButton pRipple type="button" label="Salir" (click)="logOut()" class="p-button-raised"></button>
+        </div>
+    </div>
+    
+</p-card>
+
+
