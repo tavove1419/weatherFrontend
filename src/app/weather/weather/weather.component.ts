@@ -41,7 +41,6 @@ export class WeatherComponent implements OnInit {
 
   async getDataWeather(longitude, latitude) {
     await this.weatherServiceService.dateWeather(longitude, latitude).then(info => this.infoWeather = info);
-    console.log(this.infoWeather)
     this.dataTemperature  = this.infoWeather.dataseries.slice(0, 1)[0];
     this.date = this.parsearDate(this.dataTemperature.date);
     this.loading = false;

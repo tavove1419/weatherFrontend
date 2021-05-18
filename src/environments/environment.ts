@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  routeGlobalNode: 'http://localhost:3000/api',
+  routeGlobalNode: 'http://localhost:4000/api',
   production: false
 };
 
